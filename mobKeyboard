@@ -11,7 +11,7 @@
 local G2L = {};
 
 -- StarterGui.Keyboard
-G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
 G2L["1"]["Name"] = [[Keyboard]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
@@ -1176,8 +1176,8 @@ G2L["82"]["TextSize"] = 14;
 G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["82"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["82"]["Size"] = UDim2.new(0, 42, 0, 12);
-G2L["82"]["Name"] = [[]]];
-G2L["82"]["Text"] = [[]]];
+G2L["82"]["Name"] = [[]];
+G2L["82"]["Text"] = [[]];
 G2L["82"]["Position"] = UDim2.new(0.7593151330947876, 0, 0.11823778599500656, 0);
 
 -- StarterGui.Keyboard.MK.Buttons.].LocalScript
