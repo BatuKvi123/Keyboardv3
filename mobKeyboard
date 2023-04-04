@@ -7,11 +7,11 @@
  Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER
 ]=]
 
--- Instances: 165 | Scripts: 80 | Modules: 0
+-- Instances: 166 | Scripts: 81 | Modules: 0
 local G2L = {};
 
 -- StarterGui.Keyboard
-G2L["1"] = Instance.new("ScreenGui", game.CoreGui);
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["Name"] = [[Keyboard]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
@@ -1176,8 +1176,8 @@ G2L["82"]["TextSize"] = 14;
 G2L["82"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 G2L["82"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["82"]["Size"] = UDim2.new(0, 42, 0, 12);
-G2L["82"]["Name"] = [[]];
-G2L["82"]["Text"] = [[]];
+G2L["82"]["Name"] = [[]]];
+G2L["82"]["Text"] = [[]]];
 G2L["82"]["Position"] = UDim2.new(0.7593151330947876, 0, 0.11823778599500656, 0);
 
 -- StarterGui.Keyboard.MK.Buttons.].LocalScript
@@ -1443,24 +1443,28 @@ G2L["a0"] = Instance.new("UICorner", G2L["9f"]);
 G2L["a1"] = Instance.new("LocalScript", G2L["9f"]);
 
 
+-- StarterGui.Keyboard.MK.LocalScript
+G2L["a2"] = Instance.new("LocalScript", G2L["2"]);
+
+
 -- StarterGui.Keyboard.Open
-G2L["a2"] = Instance.new("ImageButton", G2L["1"]);
-G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a2"]["Image"] = [[rbxassetid://12801466518]];
-G2L["a2"]["Size"] = UDim2.new(0, 50, 0, 47);
-G2L["a2"]["Name"] = [[Open]];
-G2L["a2"]["Position"] = UDim2.new(0.0674019604921341, 0, 0.14629259705543518, 0);
+G2L["a3"] = Instance.new("ImageButton", G2L["1"]);
+G2L["a3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a3"]["Image"] = [[rbxassetid://12801466518]];
+G2L["a3"]["Size"] = UDim2.new(0, 50, 0, 47);
+G2L["a3"]["Name"] = [[Open]];
+G2L["a3"]["Position"] = UDim2.new(0.0674019604921341, 0, 0.14629259705543518, 0);
 
 -- StarterGui.Keyboard.Open.UICorner
-G2L["a3"] = Instance.new("UICorner", G2L["a2"]);
+G2L["a4"] = Instance.new("UICorner", G2L["a3"]);
 
 
 -- StarterGui.Keyboard.Open.LocalScript
-G2L["a4"] = Instance.new("LocalScript", G2L["a2"]);
+G2L["a5"] = Instance.new("LocalScript", G2L["a3"]);
 
 
 -- StarterGui.Keyboard.Open.LocalScript
-G2L["a5"] = Instance.new("LocalScript", G2L["a2"]);
+G2L["a6"] = Instance.new("LocalScript", G2L["a3"]);
 
 
 -- StarterGui.Keyboard.MK.Buttons.W.LocalScript
@@ -2241,21 +2245,29 @@ local script = G2L["a1"];
 	end)
 end;
 task.spawn(C_a1);
--- StarterGui.Keyboard.Open.LocalScript
-local function C_a4()
-local script = G2L["a4"];
-	script.Parent.MouseButton1Up:Connect(function()
-		script.Parent.Parent.MK.Visible = true
-	end)
-end;
-task.spawn(C_a4);
--- StarterGui.Keyboard.Open.LocalScript
-local function C_a5()
-local script = G2L["a5"];
+-- StarterGui.Keyboard.MK.LocalScript
+local function C_a2()
+local script = G2L["a2"];
 	script.Parent.Active = true
 	script.Parent.Selectable = true
 	script.Parent.Draggable = true
 end;
+task.spawn(C_a2);
+-- StarterGui.Keyboard.Open.LocalScript
+local function C_a5()
+local script = G2L["a5"];
+	script.Parent.MouseButton1Up:Connect(function()
+		script.Parent.Parent.MK.Visible = true
+	end)
+end;
 task.spawn(C_a5);
+-- StarterGui.Keyboard.Open.LocalScript
+local function C_a6()
+local script = G2L["a6"];
+	script.Parent.Active = true
+	script.Parent.Selectable = true
+	script.Parent.Draggable = true
+end;
+task.spawn(C_a6);
 
 return G2L["1"], require;
